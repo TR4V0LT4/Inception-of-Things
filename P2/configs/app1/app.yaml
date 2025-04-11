@@ -2,41 +2,38 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app2
+  name: app1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app2
+      app: app1
   template:
     metadata:
       labels:
-        app: app2
+        app: app1
     spec:
       containers:
-      - name: app2
+      - name: app1
         image: nginx
         ports:
         - containerPort: 80
-data:
-  index.html: |
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>APP 2</title>
-    </head>
-    <body>
-      <h1>Hello from APP 2</h1>
-    </body>
-    </html>           
+        volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html/index.html
+          subPath: index.html
+      volumes:
+      - name: html
+        configMap:
+          name: app1-html
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: app2-service
+  name: app1-service
 spec:
   selector:
-    app: app2
+    app: app1
   ports:
   - port: 80
     targetPort: 80

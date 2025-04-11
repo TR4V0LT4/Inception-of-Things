@@ -18,17 +18,14 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
-data:
-  index.html: |
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>APP 3</title>
-    </head>
-    <body>
-      <h1>Hello from APP 3</h1>
-    </body>
-    </html>       
+        volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html/index.html
+          subPath: index.html
+      volumes:
+      - name: html
+        configMap:
+          name: app3-html       
 ---
 apiVersion: v1
 kind: Service
