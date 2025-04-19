@@ -12,7 +12,6 @@ echo \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 sudo usermod -aG docker $USER
-newgrp docker
 curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl gnupg
@@ -22,3 +21,4 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 sudo chmod 644 /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get update
 sudo apt-get install -y kubectl
+echo -e "\033[1;33mIf Docker was just installed, please reboot your machine before using k3d.\033[0m"
