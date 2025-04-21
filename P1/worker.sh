@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install dependencies
-sudo apt update && sudo apt install -y curl
+sudo apt-get update && sudo apt-get install -y curl
 
 # Install K3s in agent mode, join the server
 SERVER_IP="192.168.56.110"
