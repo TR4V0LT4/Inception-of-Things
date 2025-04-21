@@ -10,15 +10,15 @@ Vagrant.configure("2") do |config|
     end
 
     # Server (Controller Node)
-    config.vm.define "hfanzaouS" do |server|
-        server.vm.hostname = "hfanzaouS"
+    config.vm.define "wlahyaniS" do |server|
+        server.vm.hostname = "wlahyaniS"
         server.vm.network "private_network", ip: "192.168.56.110"
         server.vm.provision "shell", path: "./scripts/server.sh"
     end
 
     # ServerWorker (Agent Node)
-    config.vm.define "hfanzaouSW" do |worker|
-        worker.vm.hostname = "hfanzaouSW"
+    config.vm.define "wlahyaniSW" do |worker|
+        worker.vm.hostname = "wlahyaniSW"
         worker.vm.network "private_network", ip: "192.168.56.111"
         worker.vm.provision "shell", path: "./scripts/worker.sh"
     end
