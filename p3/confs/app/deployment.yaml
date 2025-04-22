@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: playground
+  name: ebensalt-playground
   namespace: dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: playground
+      app: ebensalt-playground
   template:
     metadata:
       labels:
-        app: playground
+        app: ebensalt-playground
     spec:
       containers:
         - name: playground

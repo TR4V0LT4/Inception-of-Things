@@ -20,6 +20,8 @@ while true; do
 done
 echo -e "${CYAN}📁 Creating 'dev' namespace...${NC}"
 kubectl create namespace dev > /dev/null
+echo -e "${CYAN}📄 Creating 'development' Argo CD project...${NC}"
+kubectl apply -f confs/development.yaml > /dev/null
 echo -e "${CYAN}⬇️  Applying application manifest to 'dev' namespace...${NC}"
 kubectl apply -f confs/application.yaml > /dev/null
 until kubectl get deploy -n dev 2>&1 | grep -qv "No resources found"; do
