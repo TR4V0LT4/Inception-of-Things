@@ -32,4 +32,8 @@ while true; do
 	kubectl get pods -n dev | grep -v NAME | awk '{print $2}' | grep -v -E '1/1' > /dev/null || break
 	sleep 1
 done
+cd confs/app
+git init
+git remote add origin https://github.com/EBensalt/hfanzaou.git
+git branch -m master main
 echo -e "${GREEN}✅ All done! Argo CD and dev app are up and running.${NC}"
