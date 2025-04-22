@@ -5,6 +5,8 @@ CYAN='\033[1;36m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 clear
+echo -e "${CYAN}✅ Restored .git directory in confs/app/${NC}"
+mv confs/app/.git-backup/ confs/app/.git
 echo -e "${CYAN}🔧 Updating APT and installing dependencies...${NC}"
 sudo apt-get update > /dev/null
 sudo apt-get install ca-certificates curl -y > /dev/null
