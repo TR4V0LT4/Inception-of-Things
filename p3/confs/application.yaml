@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-dev-app
+  name: ebensalt-app
   namespace: argocd
 spec:
-  project: default
+  project: development
   source:
-    repoURL: https://github.com/EBensalt/ebensalt-inception-of-things.git
+    repoURL: https://github.com/EBensalt/hfanzaou.git
     targetRevision: HEAD
-    path: confs/app
+    path: .
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
