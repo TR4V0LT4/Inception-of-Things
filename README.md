@@ -1,4 +1,4 @@
-# Inception-of-Things (IoT)
+# Inception-of-Things
 
 ## 📌 Summary
 This project is a **System Administration exercise** designed to introduce Kubernetes through **K3s** and **K3d** using **Vagrant** and **Argo CD**.  
