@@ -1,6 +1,5 @@
 # Inception-of-Things
 
-## 📌 Summary
 This project is a **System Administration exercise** designed to introduce Kubernetes through **K3s** and **K3d** using **Vagrant** and **Argo CD**.  
 You will learn how to:
 - Set up virtual machines with **Vagrant**.
