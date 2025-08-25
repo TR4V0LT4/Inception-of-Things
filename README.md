@@ -78,13 +78,3 @@ Access apps by adding hostnames (`app1.com`, `app2.com`, etc.) in your local `/e
 ✅ Expected result:  
 - `kubectl get ns` → shows `argocd` and `dev`
 - Deployments in `dev` automatically synchronized by Argo CD.
-
----
-
-## 📑 Submission
-- Submit your work via GitHub.
-- Only the content of your repository will be evaluated.
-- Mandatory:
-  - `p1/`, `p2/`, `p3/` folders with configs and scripts
-- Optional:
-  - `bonus/` folder
