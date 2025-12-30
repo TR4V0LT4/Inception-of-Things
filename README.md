@@ -1,5 +1,5 @@
-# Inception-of-Things
-
+<h1 align="center"> Inception-of-Things </h1>
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmRlN2YybGQzd2wyY29hOGR5bzYyamUxaHJreTB5ZjV2bzI1emJubCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9UqRcQHzBou6A/giphy.gif" alt="bob" title="gif" width="1000" />
 This project is a **System Administration exercise** designed to introduce Kubernetes through **K3s** and **K3d** using **Vagrant** and **Argo CD**.  
 You will learn how to:
 - Set up virtual machines with **Vagrant**.
